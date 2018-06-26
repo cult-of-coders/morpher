@@ -9,7 +9,8 @@ export default function objectToQuery(obj) {
     if (typeof obj[i] === 'object') {
       str +=
         `${i} {
-        ${objectToQuery(obj[i])}
+          ${objectToQuery(obj[i])}
+        }
       ` + '\n';
     } else {
       str += i + '\n';

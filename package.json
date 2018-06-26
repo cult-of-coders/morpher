@@ -1,7 +1,7 @@
 {
-  "name": "morpher",
-  "version": "0.1.0",
-  "description": "Isomorphic database updated for cultofcoders:apollo",
+  "name": "apollo-morpher",
+  "version": "0.1.1",
+  "description": "Isomorphic database blended with cultofcoders:apollo",
   "main": "dist/index.js",
   "repository": {
     "type": "git",

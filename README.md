@@ -7,7 +7,7 @@ The reason we have it on NPM is that it can be used with any frontend layer/bund
 
 ```js
 // Then on the client
-import db, { setClient } from 'morpher';
+import db, { setClient } from 'apollo-morpher';
 
 // Set your Apollo client
 setClient(apolloClient);
