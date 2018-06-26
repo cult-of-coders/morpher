@@ -143,7 +143,28 @@ class Morph {
     });
   }
 
-  findOne(query, params, options = {}): Promise<any> {
+  count(params = {}, options = {}): Promise<any> {
+    let query = this._getCachedQuery(`
+      query ${this.name}Count($params: JSON!) {
+        ${this.name}Count(params: $params)
+      }
+    `);
+
+    return new Promise((resolve, reject) => {
+      return client
+        .query({
+          query,
+          variables: { params },
+          ...options,
+        })
+        .then(({ data }) => {
+          resolve(data[`${this.name}Count`]);
+        })
+        .catch(reject);
+    });
+  }
+
+  findOne(query, params = {}, options = {}): Promise<any> {
     if (typeof query === 'object') {
       query = objectToQuery(query);
     }
