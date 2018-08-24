@@ -1,6 +1,6 @@
 {
   "name": "apollo-morpher",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Isomorphic database blended with cultofcoders:apollo",
   "main": "dist/index.js",
   "repository": {
@@ -45,5 +45,8 @@
   "typescript": {
     "definition": "dist/index.d.ts"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "ejson": "^2.1.2"
+  }
 }
